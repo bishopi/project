@@ -9,30 +9,3 @@
   width: 1200px;
   margin: 0 auto;
 }
-.header img{
-  width: 100px;
-
-
-
-
-}
-
-.header{
-  grid-area: h;
-  background-color: greenyellow;
-}
-
-.nav {
-  grid-area: n;
-  background-color: greenyellow;
-}
-
-.content {
-  grid-area: c;
-  background-color: greenyellow;
-}
-
-.content img {
-  height: 400px;
-  width: 100%;
-}

@@ -1,0 +1,9 @@
+.nav {
+    grid-area: n;
+    background-color: mediumslateblue;
+}
+
+.item {
+    color: azure;
+    font-weight: bolder;
+}

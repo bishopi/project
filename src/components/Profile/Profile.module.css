@@ -1,0 +1,15 @@
+.profile {
+    grid-area: c;
+    background-color: mediumslateblue;
+}
+
+
+.profile img {
+    height: 400px;
+    width: 100%;
+}
+
+.item {
+    color: azure;
+    font-weight: bolder;
+}
