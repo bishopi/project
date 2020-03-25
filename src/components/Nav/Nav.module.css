@@ -1,9 +1,28 @@
 .nav {
     grid-area: n;
-    background-color: mediumslateblue;
+    background-color: darkblue;
+
 }
 
 .item {
-    color: azure;
+    padding:20px 0;
+    border-bottom: 1px black solid;
+}
+
+.item a {
+    color: white;
     font-weight: bolder;
+    text-decoration: none;
+    margin-left: 20px;
+
+}
+
+.item a.active {
+    color: gold;
+    font-weight: bolder;
+
+}
+
+.item a:hover {
+    color: gold;
 }

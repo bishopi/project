@@ -1,25 +1,17 @@
 import React from "react";
 import s from './Profile.module.css';
+import MyPosts from "./MyPosts/MyPosts";
+import Posts from "./MyPosts/Posts/Posts";
 const Profile = () => {
     return <div className={s.profile}>
-        <div>
+        <div className={s.img}>
             <img src="http://greenbelarus.info/files/b87a1631.jpg" alt=""/>
         </div>
-        <div >
+        <div>
             ava + description
         </div>
-        <div >
-            My posts
-        </div>
-        <div >
-            New Post
-        </div>
-        <div className={s.item}>
-            post 1
-        </div>
-        <div className={s.item}>
-            post 2
-        </div>
+        <MyPosts/>
+
     </div>
 };
 export default Profile;

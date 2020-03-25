@@ -1,15 +1,12 @@
-.profile {
-    grid-area: c;
-    background-color: mediumslateblue;
-}
-
-
-.profile img {
-    height: 400px;
+.profile .img img {
     width: 100%;
+    transform: translate(0 ,-150px);
+
+}
+.img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+
 }
 
-.item {
-    color: azure;
-    font-weight: bolder;
-}

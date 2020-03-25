@@ -4,7 +4,7 @@ import s from './Header.module.css';
 
 const Header = () => {
     return <header className={s.header}>
-        <img src="./imges/icon.jpg"
+        <img src="http://lh4.ggpht.com/-ipOOzC51kv8/UAg8xaUyrdI/AAAAAAAAAyE/ReZfZXC7ed8/LogoVK_200_thumb%25255B1%25255D.png?imgmax=800"
              alt=""/>
     </header>
 };
