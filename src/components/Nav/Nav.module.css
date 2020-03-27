@@ -1,12 +1,18 @@
 .nav {
     grid-area: n;
     background-color: darkblue;
-
+    height: min-content;
 }
 
 .item {
     padding:20px 0;
-    border-bottom: 1px black solid;
+    border-bottom: 1px white solid;
+}
+
+
+.item a:hover{
+    color: gold;
+
 }
 
 .item a {
@@ -23,6 +29,3 @@
 
 }
 
-.item a:hover {
-    color: gold;
-}

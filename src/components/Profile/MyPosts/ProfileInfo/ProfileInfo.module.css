@@ -1,0 +1,22 @@
+.profile .cover img {
+    width: 100%;
+    transform: translate(0, -150px);
+
+}
+
+.cover {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.avatar img {
+    height: 300px;
+}
+
+.profileContent {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}

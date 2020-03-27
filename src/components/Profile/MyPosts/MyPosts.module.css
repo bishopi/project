@@ -1,0 +1,20 @@
+.myPosts {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.postBlock textarea{
+        resize: none;
+    }
+
+
+.myPosts .btnAddPost{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding:0 20px;
+}
+.othesPosts {
+    padding-left: 20px;
+}
