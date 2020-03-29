@@ -11,9 +11,6 @@ import Settings from "./components/Settings/Settings";
 import Games from "./components/Games/Games";
 
 
-
-
-
 const App = (props) => {
     return (
         <div>
@@ -21,8 +18,10 @@ const App = (props) => {
                 <Header/>
                 <Nav sidebar={props.state.sidebar}/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile' render={ () => <Profile addNewPost={props.addNewPost} posts={props.state.profile}/>}/>
-                    <Route path='/dialogs' render={ () => <Dialogs state={props.state.messages}/>}/>
+                    <Route path='/profile'
+                           render={() => <Profile addNPost={props.addNPost} updateNewPostText={props.updateNewPostText}
+                                                  posts={props.state.profile}/>}/>
+                    <Route path='/dialogs' render={() => <Dialogs state={props.state.messages}/>}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
                     <Route path='/settings' component={Settings}/>
