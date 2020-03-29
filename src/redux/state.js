@@ -1,8 +1,3 @@
-
-
-
-
-
 let state = {
     profile: {
         posts: [
@@ -31,8 +26,25 @@ let state = {
             {id: 5, message: 'Yonica'},
             {id: 6, message: 'Yof'}
         ]
-    }
+    },
+    sidebar: [
+        {name: 'Vika'},
+        {name: 'Sveta'},
+        {name: 'Lena'}
 
+
+    ]
+
+};
+export let addNewPost = (postMessage) => {
+
+
+    let newPost = {
+        id:7,
+        message: postMessage,
+        likesCount: 0
+    };
+    state.profile.posts.push(newPost);
 };
 
 export default state;

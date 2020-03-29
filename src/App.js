@@ -12,14 +12,16 @@ import Games from "./components/Games/Games";
 
 
 
+
+
 const App = (props) => {
     return (
-        <BrowserRouter>
+        <div>
             <div className='app-wrapper'>
                 <Header/>
-                <Nav/>
+                <Nav sidebar={props.state.sidebar}/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile' render={ () => <Profile posts={props.state.profile}/>}/>
+                    <Route path='/profile' render={ () => <Profile addNewPost={props.addNewPost} posts={props.state.profile}/>}/>
                     <Route path='/dialogs' render={ () => <Dialogs state={props.state.messages}/>}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
@@ -27,7 +29,7 @@ const App = (props) => {
                     <Route path='/games' component={Games}/>
                 </div>
             </div>
-        </BrowserRouter>
+        </div>
     );
 };
 

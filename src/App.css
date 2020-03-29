@@ -14,6 +14,7 @@
   grid-area: c;
   background-color: darkblue;
     color: azure;
+  height: min-content;
 
 }
 

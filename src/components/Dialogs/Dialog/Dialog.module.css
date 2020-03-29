@@ -2,11 +2,15 @@
     color: white;
     font-weight: bolder;
     text-decoration: none;
+
 }
 .dialog {
-    padding: 20px;
+    padding: 10px;
     border-bottom: 1px white solid;
     border-right: 1px white solid;
+    display: flex;
+    align-items: center;
+
 }
 
 .dialog a.active{
@@ -14,4 +18,8 @@
 }
 .dialog a:hover{
     color: gold;
+}
+.dialog img {
+    height: 40px;
+    padding-right: 10px;
 }
