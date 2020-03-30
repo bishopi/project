@@ -12,16 +12,17 @@ import Games from "./components/Games/Games";
 
 
 const App = (props) => {
+
     return (
         <div>
             <div className='app-wrapper'>
                 <Header/>
-                <Nav sidebar={props.state.sidebar}/>
+                <Nav state={props.state}/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile'
-                           render={() => <Profile addNPost={props.addNPost} updateNewPostText={props.updateNewPostText}
-                                                  posts={props.state.profile}/>}/>
-                    <Route path='/dialogs' render={() => <Dialogs state={props.state.messages}/>}/>
+                    <Route path='/profile' render={() => <Profile
+                        state={props.state} dispatch={props.dispatch}/>}/>
+                    <Route path='/dialogs' render={() => <Dialogs
+                        state={props.state} dispatch={props.dispatch}/>}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
                     <Route path='/settings' component={Settings}/>
