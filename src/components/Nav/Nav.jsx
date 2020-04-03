@@ -23,7 +23,7 @@ const Nav = (props) => {
             <NavLink to='/games' activeClassName={s.active}>Games</NavLink>
         </div>
         <div className={s.sidebar}>
-            {<Sidebar state={props.state} />}
+            {<Sidebar store={props.store} />}
         </div>
     </nav>
 };
