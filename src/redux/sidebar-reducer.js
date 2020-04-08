@@ -1,3 +1,5 @@
+
+
 let initialState =   [
         {name: 'Vika'},
         {name: 'Sveta'},
@@ -9,5 +11,5 @@ let initialState =   [
 
 const sidebarReducer = (state = initialState, action) => {
     return state;
-}
+};
 export default sidebarReducer;

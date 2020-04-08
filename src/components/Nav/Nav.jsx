@@ -1,7 +1,7 @@
 import React from "react";
 import s from './Nav.module.css';
 import {NavLink} from "react-router-dom";
-import Sidebar from "./Sidebar/Sidebar";
+import SidebarContainer from "./Sidebar/SidebarContainer";
 const Nav = (props) => {
     return <nav className={s.nav}>
         <div className={s.item}>
@@ -22,9 +22,12 @@ const Nav = (props) => {
         <div className={s.item}>
             <NavLink to='/games' activeClassName={s.active}>Games</NavLink>
         </div>
-{/*        <div className={s.sidebar}>
-            {<Sidebar store={props.store} />}
-        </div>*/}
+        <div className={s.item}>
+            <NavLink to='/users' activeClassName={s.active}>Users</NavLink>
+        </div>
+        <div className={s.sidebar}>
+            {<SidebarContainer store={props.store} />}
+        </div>
     </nav>
 };
 export default Nav;
