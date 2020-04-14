@@ -1,28 +1,37 @@
 import React from "react";
 import s from "./users.module.css"
-import * as axios from 'axios';
 import userPhoto from '../../imges/userPxoto.png'
+import {NavLink} from "react-router-dom";
 
 
-let Users = (props) =>  {
-        let pagesCount = Math.ceil( props.totalUsersCount / props.pageSize) ;
-        let page = [];
-        for (let i = 1; i <= pagesCount; i++)
-            page.push(i);
+let Users = (props) => {
+    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+    let page = [];
+    for (let i = 1; i <= props.paginationSize; i++)
+        page.push(i);
 
-        return <div>
-            <div>
-                {page.map(p => {
-                    return <span className={props.currentPage === p && s.selectedPage}
-                    onClick={(e) =>{props.onPageChanged(p)} }>{p}</span>
-                })}
-            </div>
+    return <div>
+        <div>
+            {page.map(p => {
+                return <span className={props.currentPage === p && s.selectedPage}
+                             onClick={() => {
+                                 props.onPageChanged(p)
+                             }}>{p}</span>
+            })}
+            <button onClick={() => {
+                props.paginationPush(pagesCount)
+            }}>More Users
+            </button>
+        </div>
 
-            {
-                props.users.map(u => <div key={u.id}>
+        {
+            props.users.map(u => <div key={u.id}>
     <span>
      <div>
-      <img src={u.photos.small != null ? u.photos.small : userPhoto} className={s.userPhoto}/>
+         <NavLink to={'/profile/' + u.id}>
+             <img src={u.photos.small != null ? u.photos.small : userPhoto}
+                  className={s.userPhoto}/></NavLink>
+
      </div>
      <div>{u.followed
          ? <button onClick={() => {
@@ -34,7 +43,7 @@ let Users = (props) =>  {
 
      </div>
     </span>
-                    <span>
+                <span>
      <span>
       <div>{u.name}</div>
       <div>{u.status}</div>
@@ -44,9 +53,9 @@ let Users = (props) =>  {
       <div>{"u.location.country"}</div>
      </span>
     </span>
-                </div>)
-            }
-        </div>
+            </div>)
+        }
+    </div>
 
 }
 
